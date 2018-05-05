@@ -1,0 +1,32 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.0.3.xsd">
+
+	<http use-expressions="true">
+		<intercept-url pattern="/index.jsp" access="permitAll" />
+		<intercept-url pattern="/admin/**" access="hasRole('admin')"/>
+		<intercept-url pattern="/patient/**" access="hasAnyRole('admin','receptionist')" />
+		<intercept-url pattern="/payment/**" access="hasAnyRole('admin','receptionist')" />
+		<intercept-url pattern="/home/**" access="hasAnyRole('admin','receptionist')" />
+		<intercept-url pattern="/lab/**" access="hasAnyRole('lab','receptionist')"/>
+		<form-login login-page="/login.htm" 
+			authentication-failure-url="/loginfailed.htm" authentication-success-handler-ref="authSuccessHandler"/>
+		<logout logout-success-url="/logout.htm" />
+	</http>
+	
+	<!-- default-target-url="/home/home.htm" -->
+	
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="anila" password="123456" authorities="admin, receptionist, lab" />
+				<user name="anilr" password="123456" authorities="receptionist"/>
+				<user name="anill" password="123456" authorities="lab"/>
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+	
+</beans:beans>

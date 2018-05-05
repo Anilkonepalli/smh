@@ -1,0 +1,1303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ERDiagram version="1.1">
+  <Connection session="test" database="smhtest" />
+  <Drawing gridVisible="false" snapOn="false" fastRouting="false" labelsVisible="true" />
+  <Tables>
+    <Table name="activitycharges">
+      <Drawing expanded="true" location="516,1687" dimensions="194,89" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="activityCharge" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="activityName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="aptttest">
+      <Drawing expanded="true" location="5523,629" dimensions="170,108" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="contorl" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="test" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="testFee_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="asstcharge">
+      <Drawing expanded="true" location="3384,205" dimensions="177,108" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="noOfDays" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="totalCharges" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="patient_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="bed">
+      <Drawing expanded="true" location="1,1076" dimensions="184,128" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="bedNum" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="fee" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="isAvailability" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="char" size="1" />
+        </Column>
+        <Column name="ward_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="bedcharge_bed">
+      <Drawing expanded="true" location="187,0" dimensions="163,68" />
+      <Columns>
+        <Column name="BedCharge_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="bed_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="bedcharge">
+      <Drawing expanded="true" location="566,205" dimensions="177,108" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="noOfDays" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="totalCharges" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="patient_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="bloodtranfusioncharge">
+      <Drawing expanded="true" location="1951,205" dimensions="178,108" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="noOfDays" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="totalCharges" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="patient_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="branch">
+      <Drawing expanded="true" location="0,1553" dimensions="187,89" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="branchName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="location" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="cardiacmonitorcharge">
+      <Drawing expanded="true" location="2229,205" dimensions="177,108" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="noOfDays" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="totalCharges" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="patient_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="cbptest">
+      <Drawing expanded="true" location="6088,609" dimensions="190,148" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="esr" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="heamoglobin" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="plateletCount" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="tlcCount" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="testFee_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="chaildtestfee_testfields">
+      <Drawing expanded="true" location="7183,649" dimensions="183,68" />
+      <Columns>
+        <Column name="ChaildTestFee_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="testFields_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="chaildtestfee">
+      <Drawing expanded="true" location="6758,1066" dimensions="182,149" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="billingEnum" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="category" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="description" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="fee" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="testName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="consultant_patient">
+      <Drawing expanded="true" location="288,225" dimensions="178,68" />
+      <Columns>
+        <Column name="Consultant_id" primary_key="true" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="patients_id" primary_key="true" foreign_key="true" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="consultant">
+      <Drawing expanded="true" location="354,1056" dimensions="189,169" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="name" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="password" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="phone" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="qualification" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="regNo" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="specialization" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="deliverycharge">
+      <Drawing expanded="true" location="1120,205" dimensions="177,108" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="noOfDays" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="totalCharges" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="patient_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="idcreator">
+      <Drawing expanded="true" location="755,1687" dimensions="188,89" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="date" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="presentValue" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="inpayments">
+      <Drawing expanded="true" location="2506,175" dimensions="224,168" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="due" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="paymentAmt" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="paymentTypeEnum" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="paymetnDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="totalAmount" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="patient_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="mantouxtest">
+      <Drawing expanded="true" location="5793,619" dimensions="195,128" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="inTime" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="observedTime" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="result" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="testFee_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="mlccharge">
+      <Drawing expanded="true" location="843,205" dimensions="177,108" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="noOfDays" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="totalCharges" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="patient_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="nebulisercharge">
+      <Drawing expanded="true" location="3107,205" dimensions="177,108" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="noOfDays" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="totalCharges" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="patient_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="nursingcharge">
+      <Drawing expanded="true" location="1674,205" dimensions="177,108" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="noOfDays" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="totalCharges" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="patient_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="outpayments">
+      <Drawing expanded="true" location="0,1687" dimensions="242,229" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="amount" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="bankName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="chqNo" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="date" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="ddNo" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="name" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="outPaymentTypeEnum" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="reason" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="staffId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="oxygencharge">
+      <Drawing expanded="true" location="1397,205" dimensions="177,108" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="noOfDays" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="totalCharges" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="patient_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="patient_patienttest">
+      <Drawing expanded="true" location="3938,225" dimensions="183,68" />
+      <Columns>
+        <Column name="Patient_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="patientTest_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="patient">
+      <Drawing expanded="true" location="2210,590" dimensions="214,186" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="bigint" size="20" />
+        </Column>
+        <Column name="dischargeDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="datetime" size="19" />
+        </Column>
+        <Column name="patientTypeEnum" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="refBy" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="registrationDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="date" size="10" />
+        </Column>
+        <Column name="bed_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="consultant_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="patientDetails_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="patientdetails">
+      <Drawing expanded="true" location="2279,1016" dimensions="219,249" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="address" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="age" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="city" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="contactNo" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="emergencyContact" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="genderEnum" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="guardianName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="isArogyaSree" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="char" size="1" />
+        </Column>
+        <Column name="maritalStatusEnum" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="patientName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="patienttest_patient">
+      <Drawing expanded="true" location="4221,225" dimensions="183,68" />
+      <Columns>
+        <Column name="PatientTest_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="patientList_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="patienttest_testfee">
+      <Drawing expanded="true" location="4504,225" dimensions="166,68" />
+      <Columns>
+        <Column name="PatientTest_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="testFee_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="patienttest">
+      <Drawing expanded="true" location="4233,648" dimensions="149,69" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="status" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="patienttestresult">
+      <Drawing expanded="true" location="5385,168" dimensions="216,182" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="apttTest_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="cbpTest_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="mantouxTest_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="patientTest_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="ptTest_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="stollTest_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="stoolOccultBloodTest_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="pttest">
+      <Drawing expanded="true" location="6378,619" dimensions="170,128" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="INR" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="contorl" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="test" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="testFee_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="pulseoxymetercharge">
+      <Drawing expanded="true" location="2830,205" dimensions="177,108" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="noOfDays" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="totalCharges" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="patient_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="staff">
+      <Drawing expanded="true" location="287,1687" dimensions="184,149" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="designation" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="name" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="password" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="phone" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="qualification" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="stooloccultbloodtest">
+      <Drawing expanded="true" location="5240,629" dimensions="183,108" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="microscopic" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="occultBlood" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="testFee_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="stooltest">
+      <Drawing expanded="true" location="4691,629" dimensions="186,108" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="macroscopic" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="reaction" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="testFee_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="testfee_chaildtestfee">
+      <Drawing expanded="true" location="6648,649" dimensions="167,68" />
+      <Columns>
+        <Column name="TestFee_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="testFeeList_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="testfee_testfee">
+      <Drawing expanded="true" location="4977,649" dimensions="163,68" />
+      <Columns>
+        <Column name="TestFee_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="testFeeList_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="testfee_testfields">
+      <Drawing expanded="true" location="6928,649" dimensions="155,68" />
+      <Columns>
+        <Column name="TestFee_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="testFields_id" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="testfee">
+      <Drawing expanded="true" location="5517,1066" dimensions="182,149" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="billingEnum" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="category" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="description" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="fee" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="testName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="testfields">
+      <Drawing expanded="true" location="7078,1056" dimensions="194,169" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="defaultValue" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="fieldName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="fieldType" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="normalRanges" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="propName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="units" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="ventilatorcharge">
+      <Drawing expanded="true" location="3661,205" dimensions="177,108" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="noOfDays" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="totalCharges" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="patient_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="bigint" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="ward">
+      <Drawing expanded="true" location="5,1365" dimensions="177,88" />
+      <Columns>
+        <Column name="id" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="11" />
+        </Column>
+        <Column name="description" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="branch_id" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="int" size="11" />
+        </Column>
+      </Columns>
+    </Table>
+  </Tables>
+  <Relationships>
+    <Relationship name="FK5162D841AB47701C">
+      <Details primary_table="testfee" foreign_table="aptttest">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="testFee_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKBC19A6C7CF7A9A9C">
+      <Details primary_table="patient" foreign_table="asstcharge">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="patient_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK1046117A7C78">
+      <Details primary_table="ward" foreign_table="bed">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="ward_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK7B90779768CB2A1C">
+      <Details primary_table="bed" foreign_table="bedcharge_bed">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="bed_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK7B9077977E8F583C">
+      <Details primary_table="bedcharge" foreign_table="bedcharge_bed">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="BedCharge_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK57A68675CF7A9A9C">
+      <Details primary_table="patient" foreign_table="bedcharge">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="patient_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKE343187DCF7A9A9C">
+      <Details primary_table="patient" foreign_table="bloodtranfusioncharge">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="patient_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK232DB53CF7A9A9C">
+      <Details primary_table="patient" foreign_table="cardiacmonitorcharge">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="patient_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK85CE7003AB47701C">
+      <Details primary_table="testfee" foreign_table="cbptest">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="testFee_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK96E9E41BD5FB0C9C">
+      <Details primary_table="chaildtestfee" foreign_table="chaildtestfee_testfields">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="ChaildTestFee_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK96E9E41BA3FECBB8">
+      <Details primary_table="testfields" foreign_table="chaildtestfee_testfields">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="testFields_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK5E0B214169B946F3">
+      <Details primary_table="patient" foreign_table="consultant_patient">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="patients_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK5E0B2141D24AE198">
+      <Details primary_table="consultant" foreign_table="consultant_patient">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="Consultant_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK3D882FE8CF7A9A9C">
+      <Details primary_table="patient" foreign_table="deliverycharge">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="patient_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKB49D6792CF7A9A9C">
+      <Details primary_table="patient" foreign_table="inpayments">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="patient_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKDE4B174AAB47701C">
+      <Details primary_table="testfee" foreign_table="mantouxtest">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="testFee_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK58D94A58CF7A9A9C">
+      <Details primary_table="patient" foreign_table="mlccharge">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="patient_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKEFA5CFADCF7A9A9C">
+      <Details primary_table="patient" foreign_table="nebulisercharge">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="patient_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK6EA2AFCECF7A9A9C">
+      <Details primary_table="patient" foreign_table="nursingcharge">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="patient_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK78452C94CF7A9A9C">
+      <Details primary_table="patient" foreign_table="oxygencharge">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="patient_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKC438F2BDCF7A9A9C">
+      <Details primary_table="patient" foreign_table="patient_patienttest">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="Patient_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKC438F2BD5674AC7C">
+      <Details primary_table="patienttest" foreign_table="patient_patienttest">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="patientTest_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK340C82E5D24AE198">
+      <Details primary_table="consultant" foreign_table="patient">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="consultant_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK340C82E568CB2A1C">
+      <Details primary_table="bed" foreign_table="patient">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="bed_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK340C82E5EC8E3F38">
+      <Details primary_table="patientdetails" foreign_table="patient">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="patientDetails_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK57AF63BD3C92D7BE">
+      <Details primary_table="patient" foreign_table="patienttest_patient">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="patientList_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK57AF63BD5674AC7C">
+      <Details primary_table="patienttest" foreign_table="patienttest_patient">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="PatientTest_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK3212264C5674AC7C">
+      <Details primary_table="patienttest" foreign_table="patienttest_testfee">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="PatientTest_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK3212264CAB47701C">
+      <Details primary_table="testfee" foreign_table="patienttest_testfee">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="testFee_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKC3AB8814468439D8">
+      <Details primary_table="aptttest" foreign_table="patienttestresult">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="apttTest_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKC3AB8814F5853D3C">
+      <Details primary_table="mantouxtest" foreign_table="patienttestresult">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="mantouxTest_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKC3AB881491AF779C">
+      <Details primary_table="cbptest" foreign_table="patienttestresult">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="cbpTest_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKC3AB881470565518">
+      <Details primary_table="pttest" foreign_table="patienttestresult">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="ptTest_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKC3AB8814A4754358">
+      <Details primary_table="stooloccultbloodtest" foreign_table="patienttestresult">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="stoolOccultBloodTest_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKC3AB88145674AC7C">
+      <Details primary_table="patienttest" foreign_table="patienttestresult">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="patientTest_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKC3AB8814BFA3ABD9">
+      <Details primary_table="stooltest" foreign_table="patienttestresult">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="stollTest_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK8D4B20B6AB47701C">
+      <Details primary_table="testfee" foreign_table="pttest">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="testFee_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK774C1C6CF7A9A9C">
+      <Details primary_table="patient" foreign_table="pulseoxymetercharge">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="patient_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKBEC24C13AB47701C">
+      <Details primary_table="testfee" foreign_table="stooloccultbloodtest">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="testFee_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKD78F939DAB47701C">
+      <Details primary_table="testfee" foreign_table="stooltest">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="testFee_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKA50D20A4AB47701C">
+      <Details primary_table="testfee" foreign_table="testfee_chaildtestfee">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="TestFee_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FKA50D20A4FB63C9F9">
+      <Details primary_table="chaildtestfee" foreign_table="testfee_chaildtestfee">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="testFeeList_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK6B5B7DA95E4ACCBE">
+      <Details primary_table="testfee" foreign_table="testfee_testfee">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="testFeeList_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK6B5B7DA9AB47701C">
+      <Details primary_table="testfee" foreign_table="testfee_testfee">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="TestFee_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK4C1E35B6AB47701C">
+      <Details primary_table="testfee" foreign_table="testfee_testfields">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="TestFee_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK4C1E35B6A3FECBB8">
+      <Details primary_table="testfields" foreign_table="testfee_testfields">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="testFields_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK23D05662CF7A9A9C">
+      <Details primary_table="patient" foreign_table="ventilatorcharge">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="patient_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK29069CB434CB38">
+      <Details primary_table="branch" foreign_table="ward">
+        <PrimaryKeys>
+          <ColumnName name="id" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="branch_id" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+  </Relationships>
+</ERDiagram>
+

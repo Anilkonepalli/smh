@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+    <definition name="base.definition" template="/WEB-INF/jsp/i1-smhBaseLayout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/jsp/i1-smhHeader.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/i1-smhFooter.jsp" />
+    </definition>
+    
+    <definition name="admin.definition" template="/WEB-INF/jsp/i1-smhAdminLayout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/jsp/i1-smhHeader.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/i1-smhAdminMenu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/i1-smhFooter.jsp" />
+    </definition>
+    
+    <definition name="login.definition" template="/WEB-INF/jsp/i1-smhLoginLayout.jsp">
+        <put-attribute name="body" value="" />
+    </definition>
+    
+    <!-- Login Module Start  i1-smhLoginLayout.jsp -->
+    
+    <definition name="login" extends="login.definition">
+    	<put-attribute name="body" value="/WEB-INF/jsp/i1-login.jsp"/>
+    </definition>
+    
+    <definition name="home" extends="base.definition">
+    	 <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/jsp/i1-smhHeader.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/i1-home.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/i1-smhFooter.jsp" />
+    </definition>
+    
+    <!-- Login Module End -->
+    
+    <!-- Patient Module Start -->
+    
+ 	<definition name="register" extends="base.definition">
+ 		<put-attribute name="body" value="/WEB-INF/jsp/i1-register.jsp"/>
+ 	</definition>
+ 	
+ 	<definition name="patientDashboard" extends="base.definition">
+ 		<put-attribute name="body" value="/WEB-INF/jsp/i1-patientDashboard.jsp"/>
+ 	</definition>
+ 	
+ 	<!-- Patient Module END -->
+ 	
+ 	<!-- Payment Module Start -->
+ 	
+ 	<definition name="makePayment" extends="base.definition">
+ 		<put-attribute name="body" value="/WEB-INF/jsp/i1-submitPayment.jsp"/>
+ 	</definition>
+ 	
+ 	<definition name="paymentDashboard" extends="base.definition">
+ 	<put-attribute name="body" value="/WEB-INF/jsp/i1-payment.jsp"/>
+ 	</definition>
+ 	
+ 	<definition name="createVoucher" extends="base.definition">
+ 	<put-attribute name="body" value="/WEB-INF/jsp/i1-voucher.jsp"/>
+ 	</definition>
+ 	
+ 	<!-- Payment Module END -->
+ 	
+ 	<!-- Lab Module Start -->
+ 	
+ 	<definition name="labDashboard" extends="base.definition">
+ 	<put-attribute name="body" value="/WEB-INF/jsp/i1-labDashBoard.jsp"/>
+ 	</definition>
+ 	
+ 	<definition name="listOfTests" extends="base.definition">
+ 	<put-attribute name="body" value="/WEB-INF/jsp/i1-listOfTests.jsp"/>
+ 	</definition>
+ 	
+ 	<definition name="viewTests" extends="base.definition">
+ 	<put-attribute name="body" value="/WEB-INF/jsp/i1-viewTests.jsp"/>
+ 	</definition>
+ 	
+ 	<definition name="viewTestCharges" extends="base.definition">
+ 		<put-attribute name="body" value="/WEB-INF/jsp/i1-viewTestsCharges.jsp"/>
+ 	</definition>
+ 	
+ 	<!-- Lab Module END -->
+ 	
+ 	<!-- Admin dashboard -->
+ 	
+ 	<definition name="adminDashboard" extends="base.definition">
+ 		<put-attribute name="body" value="/WEB-INF/jsp/i1-adminDashboard.jsp"/>
+ 	</definition>
+ 	
+ 	<!-- Admin dashboard end -->
+</tiles-definitions>
